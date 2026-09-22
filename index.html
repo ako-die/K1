@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B4F9C">
+<link id="app-icon-data" rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 512 512&quot;&gt;
+&lt;defs&gt;&lt;linearGradient id=&quot;g&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;&gt;&lt;stop stop-color=&quot;#0B4F9C&quot;/&gt;&lt;stop offset=&quot;1&quot; stop-color=&quot;#1976D2&quot;/&gt;&lt;/linearGradient&gt;&lt;/defs&gt;
+&lt;rect width=&quot;512&quot; height=&quot;512&quot; rx=&quot;105&quot; fill=&quot;url(#g)&quot;/&gt;
+&lt;path d=&quot;M125 118c75-42 151-42 226 0v164c-75-42-151-42-226 0z&quot; fill=&quot;#fff&quot; opacity=&quot;.96&quot;/&gt;
+&lt;path d=&quot;M351 118c-75-42-151-42-226 0&quot; fill=&quot;none&quot; stroke=&quot;#D7E9FA&quot; stroke-width=&quot;12&quot;/&gt;
+&lt;path d=&quot;M155 165h105M155 197h105M155 229h70&quot; stroke=&quot;#0B4F9C&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M314 152v88&quot; stroke=&quot;#8E1734&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;text x=&quot;256&quot; y=&quot;390&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial,sans-serif&quot; font-size=&quot;150&quot; font-weight=&quot;900&quot; fill=&quot;#FFC928&quot; stroke=&quot;#7A5200&quot; stroke-width=&quot;4&quot;&gt;K1&lt;/text&gt;
+&lt;rect x=&quot;128&quot; y=&quot;416&quot; width=&quot;256&quot; height=&quot;38&quot; rx=&quot;19&quot; fill=&quot;#8E1734&quot;/&gt;
+&lt;text x=&quot;256&quot; y=&quot;444&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial,sans-serif&quot; font-size=&quot;23&quot; font-weight=&quot;800&quot; fill=&quot;#fff&quot; letter-spacing=&quot;5&quot;&gt;DAILY REPOT&lt;/text&gt;
+&lt;/svg&gt;">
+<link rel="apple-touch-icon" href="data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 512 512&quot;&gt;
+&lt;defs&gt;&lt;linearGradient id=&quot;g&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;&gt;&lt;stop stop-color=&quot;#0B4F9C&quot;/&gt;&lt;stop offset=&quot;1&quot; stop-color=&quot;#1976D2&quot;/&gt;&lt;/linearGradient&gt;&lt;/defs&gt;
+&lt;rect width=&quot;512&quot; height=&quot;512&quot; rx=&quot;105&quot; fill=&quot;url(#g)&quot;/&gt;
+&lt;path d=&quot;M125 118c75-42 151-42 226 0v164c-75-42-151-42-226 0z&quot; fill=&quot;#fff&quot; opacity=&quot;.96&quot;/&gt;
+&lt;path d=&quot;M351 118c-75-42-151-42-226 0&quot; fill=&quot;none&quot; stroke=&quot;#D7E9FA&quot; stroke-width=&quot;12&quot;/&gt;
+&lt;path d=&quot;M155 165h105M155 197h105M155 229h70&quot; stroke=&quot;#0B4F9C&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;path d=&quot;M314 152v88&quot; stroke=&quot;#8E1734&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;round&quot;/&gt;
+&lt;text x=&quot;256&quot; y=&quot;390&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial,sans-serif&quot; font-size=&quot;150&quot; font-weight=&quot;900&quot; fill=&quot;#FFC928&quot; stroke=&quot;#7A5200&quot; stroke-width=&quot;4&quot;&gt;K1&lt;/text&gt;
+&lt;rect x=&quot;128&quot; y=&quot;416&quot; width=&quot;256&quot; height=&quot;38&quot; rx=&quot;19&quot; fill=&quot;#8E1734&quot;/&gt;
+&lt;text x=&quot;256&quot; y=&quot;444&quot; text-anchor=&quot;middle&quot; font-family=&quot;Arial,sans-serif&quot; font-size=&quot;23&quot; font-weight=&quot;800&quot; fill=&quot;#fff&quot; letter-spacing=&quot;5&quot;&gt;DAILY REPOT&lt;/text&gt;
+&lt;/svg&gt;">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="application-name" content="Daily Repot K1">
+
+<title>Daily Repot K1</title>
+<style>
+:root{
+ --blue:#0B4F9C;--blue2:#1976D2;--blue3:#EAF4FF;
+ --navy:#082B55;--maroon:#8E1734;--maroon2:#B82B4A;
+ --yellow:#FFC928;--white:#fff;--bg:#F3F8FD;--text:#15324D;
+ --muted:#66788A;--line:#D8E4EF;--shadow:0 8px 24px rgba(8,43,85,.12)
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#DCEEFF,#F8FBFF);color:var(--text)}
+.app{max-width:480px;margin:auto;min-height:100vh;background:#fff;box-shadow:0 0 30px #aac4dc33}
+.page{display:none}.page.active{display:block}
+.hidden{display:none!important}
+.splash{min-height:100vh;background:linear-gradient(160deg,#DFF2FF 0%,#F7FBFF 48%,#E8F3FF 100%);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.splash:before{content:"";position:absolute;width:430px;height:220px;left:-100px;bottom:-80px;background:var(--blue);border-radius:50% 50% 0 0;transform:rotate(-8deg);opacity:.98}
+.splash:after{content:"";position:absolute;width:430px;height:130px;right:-170px;bottom:-50px;background:var(--maroon);border-radius:50% 50% 0 0;transform:rotate(8deg)}
+.logo-big{position:relative;z-index:2;width:170px;height:170px;border-radius:34px;background:linear-gradient(145deg,#0A4386,#1976D2);box-shadow:0 16px 35px #174b7a44;display:flex;flex-direction:column;align-items:center;justify-content:center;border:4px solid #fff;margin-bottom:22px}
+.book{font-size:55px;line-height:1;margin-bottom:-2px}
+.k1{font-weight:900;font-size:53px;line-height:.9;color:var(--yellow);text-shadow:2px 3px 0 #9c6510}
+.daily{font-weight:800;color:#fff;letter-spacing:2px;font-size:14px;margin-top:8px}
+.splash h1{position:relative;z-index:2;color:var(--navy);font-size:31px;margin:0}
+.splash h1 span{color:var(--yellow);text-shadow:1px 2px #a36f00}
+.splash p{position:relative;z-index:2;color:var(--navy);font-size:13px;margin:8px 25px 30px;line-height:1.5}
+.progress{position:relative;z-index:2;width:180px;height:7px;background:#d3e5f6;border-radius:20px;overflow:hidden}
+.progress i{display:block;width:65%;height:100%;background:var(--blue2);border-radius:20px}
+.created{position:absolute;z-index:3;bottom:24px;right:22px;color:#fff;font-style:italic;font-weight:700}
+.splash-start{position:relative;z-index:4;border:0;background:var(--blue);color:#fff;border-radius:12px;padding:12px 35px;font-weight:800;margin-top:20px;box-shadow:0 7px 15px #0b4f9c44;cursor:pointer}
+header{background:linear-gradient(135deg,var(--blue),#1168C6);color:#fff;padding:15px 16px 18px;box-shadow:var(--shadow);position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:10px}.mini-logo{width:45px;height:45px;border-radius:13px;background:#fff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:900;line-height:.8;position:relative}.mini-logo b{font-size:20px;color:var(--yellow);text-shadow:1px 1px #8b6500}.mini-logo small{position:absolute;bottom:4px;font-size:6px;color:var(--maroon)}
+h1{font-size:21px;margin:0 0 3px}.subtitle{font-size:11px;opacity:.92}
+main{padding:18px 15px 90px}.section-title{font-size:21px;color:var(--navy);font-weight:800;margin:3px 0}.section-sub{font-size:12px;color:var(--muted);margin-bottom:16px}
+.menu-grid{display:grid;gap:12px}.menu-card{border:0;border-radius:16px;padding:17px;background:linear-gradient(135deg,var(--blue),#1268C5);box-shadow:0 7px 18px #0b4f9c2a;display:flex;align-items:center;gap:14px;color:#fff;text-align:left;cursor:pointer;border:1px solid #6eaff033}.menu-card:nth-child(2),.menu-card:nth-child(3){background:linear-gradient(135deg,var(--navy),#0B4F9C)}.menu-card .icon{width:48px;height:48px;border-radius:13px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:24px}.menu-card strong{display:block;font-size:16px;margin-bottom:4px}.menu-card span{font-size:11px;opacity:.88}
+.card{background:#fff;border-radius:17px;padding:16px;box-shadow:var(--shadow);border:1px solid #e2edf6;margin-bottom:13px}.field{margin-bottom:13px}label{font-size:12px;font-weight:800;color:var(--navy);display:block;margin-bottom:6px}input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:14px;color:var(--text);outline:none}input:focus,select:focus{border-color:var(--blue)}
+.btn{border:0;border-radius:10px;padding:12px 15px;font-size:13px;font-weight:800;cursor:pointer}.btn-primary{background:var(--blue);color:#fff}.btn-maroon{background:var(--maroon);color:#fff}.btn-yellow{background:var(--yellow);color:#17324d}.btn-light{background:#edf5fb;color:var(--navy)}.btn-danger{background:#fae8ed;color:var(--maroon)}.btn-row{display:flex;gap:8px;flex-wrap:wrap}
+.back{font-size:13px;font-weight:800;color:var(--blue);margin-bottom:13px;cursor:pointer}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.stat{background:#EFF7FF;border:1px solid #DDECF9;border-radius:14px;padding:13px}.stat:nth-child(2n){background:#FCEFF2;border-color:#F5D9DF}.stat small{font-size:10px;color:var(--muted)}.stat b{display:block;font-size:23px;color:var(--blue);margin-top:3px}.stat:nth-child(2n) b{color:var(--maroon)}
+.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:11px;min-width:500px}th{background:var(--blue);color:#fff;padding:9px;text-align:left}td{padding:9px;border-bottom:1px solid #e6edf3}.badge{display:inline-block;background:#EAF4FF;color:var(--blue);padding:5px 7px;border-radius:20px;font-weight:800;font-size:10px}.empty{text-align:center;color:var(--muted);padding:25px}
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(480px,100%);background:#fff;border-top:1px solid #dbe6ef;display:flex;padding:7px 9px;gap:4px;z-index:10}.nav button{flex:1;border:0;background:transparent;color:#748494;font-size:10px;padding:6px;border-radius:9px}.nav button.active{background:#EAF4FF;color:var(--blue);font-weight:800}
+.login-wrap{min-height:100vh;background:linear-gradient(160deg,#E7F4FF,#fff 55%,#F8EEF1);display:flex;align-items:center;justify-content:center;padding:22px}.login-card{width:100%;background:#fff;border-radius:22px;padding:23px;box-shadow:var(--shadow);border:1px solid #e1ebf4;text-align:center}.login-card .login-icon{margin:auto auto 12px;width:72px;height:72px;border-radius:20px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px}.role-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0 15px}.role{border:2px solid #dce7f0;border-radius:12px;padding:11px;background:#fff;color:var(--navy);font-weight:800;cursor:pointer}.role.selected{border-color:var(--maroon);background:#FCEFF2;color:var(--maroon)}
+.role:hover{border-color:var(--blue)}
+.userbar{display:flex;justify-content:space-between;align-items:center;background:#EAF4FF;border-radius:10px;padding:8px 10px;margin:0 0 15px;font-size:11px;color:var(--navy)}.logout{border:0;background:transparent;color:var(--maroon);font-weight:800;cursor:pointer}
+.report-head{text-align:center;border-bottom:3px solid var(--maroon);padding-bottom:10px;margin-bottom:12px}.report-head h2{color:var(--blue);margin:0 0 4px}.report-head p{font-size:11px;color:#667}
+@media print{body{background:#fff}.app{max-width:none}.nav,header,.no-print{display:none!important}.print-area{display:block!important}}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- SPLASH -->
+<section id="splash" class="page active">
+ <div class="splash">
+  <div class="logo-big"><div class="book" style="width:92px;height:72px;position:relative;margin-bottom:8px">
+<svg viewBox="0 0 180 140" width="92" height="72" aria-label="Buku laporan K1">
+ <path d="M12 20Q55 2 90 22v93Q52 96 12 112z" fill="#fff" stroke="#d8e9f7" stroke-width="5"/>
+ <path d="M168 20Q125 2 90 22v93q38-19 78-3z" fill="#fff" stroke="#d8e9f7" stroke-width="5"/>
+ <path d="M34 42h42M34 59h42M34 76h30" stroke="#0B4F9C" stroke-width="7" stroke-linecap="round"/>
+ <path d="M146 40v48M134 54l12-14 12 14" stroke="#8E1734" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div><div class="k1">K1</div><div class="daily">DAILY REPOT</div></div>
+  <h1>Daily Repot <span>K1</span></h1>
+  <p>Catat Hari Ini, Dukung Layanan yang Lebih Baik</p>
+  <div class="progress"><i></i></div>
+  <button class="splash-start" onclick="showPage('login')">MULAI</button>
+  <div class="created">Created by Dee</div>
+ </div>
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="page">
+ <div class="login-wrap">
+  <div class="login-card">
+   <div class="login-icon">🔐</div>
+   <h2 style="margin:0;color:var(--navy)">Login Daily Repot K1</h2>
+   <p style="font-size:12px;color:var(--muted)">Cabang: input & laporan cabang sendiri · KCU: monitoring seluruh cabang</p>
+   <label style="text-align:left">User</label>
+   <div class="role-row">
+    <button id="roleCabang" class="role selected" onclick="selectRole('Cabang')">CABANG</button>
+    <button id="roleKcu" class="role" onclick="selectRole('KCU')">KCU</button>
+   </div>
+   <div class="field" style="text-align:left"><label>Nama User</label><input id="loginName" placeholder="Masukkan nama user"></div>
+   <div id="loginBranchWrap" class="field" style="text-align:left"><label>Nama Cabang</label><input id="loginBranch" placeholder="Contoh: Kuningan"></div>
+   <div class="field" style="text-align:left"><label>Password</label><input id="loginPass" type="password" placeholder="Masukkan password"></div>
+   <button class="btn btn-primary" style="width:100%" onclick="login()">LOGIN</button>
+   <button class="btn btn-light" style="width:100%;margin-top:8px" onclick="showPage('splash')">Kembali</button>
+  </div>
+ </div>
+</section>
+
+<!-- APP HOME -->
+<section id="appHome" class="page">
+<header><div class="brand"><div class="mini-logo">📖<b>K1</b><small>DAILY</small></div><div><h1>Daily Repot <span style="color:var(--yellow)">K1</span></h1><div class="subtitle">Catat Hari Ini, Dukung Layanan yang Lebih Baik</div></div></div></header>
+<main>
+<div id="userBar" class="userbar"><span id="userInfo">User: -</span><button class="logout" onclick="logout()">Logout</button></div>
+<div class="section-title">Selamat Datang!</div><div class="section-sub">Mari bersama mencatat dan mendukung layanan K1 yang lebih optimal.</div>
+<div class="menu-grid">
+<button class="menu-card" onclick="showPage('input')"><div class="icon">📄＋</div><div><strong>Input Repot</strong><span>Input data harian cabang</span></div><b style="margin-left:auto">›</b></button>
+<button class="menu-card" onclick="showPage('daily')"><div class="icon">📊</div><div><strong>Laporan Daily</strong><span>Lihat total semua cabang atau per cabang</span></div><b style="margin-left:auto">›</b></button>
+<button id="printMenu" class="menu-card" onclick="showPage('print')"><div class="icon">🖨️</div><div><strong>Cetak Laporan</strong><span>Pilih periode, cabang, cetak & share</span></div><b style="margin-left:auto">›</b></button>
+<button id="masterBranchMenu" class="menu-card hidden" onclick="showPage('masterBranch')"><div class="icon">🏢＋</div><div><strong>Master Cabang</strong><span>Tambah dan kelola daftar cabang</span></div><b style="margin-left:auto">›</b></button>
+</div>
+<div class="card" style="margin-top:15px;background:#FCEFF2;border-color:#F4D8DF;text-align:center"><b style="color:var(--maroon)">“Data Kecil Memberikan Dampak Besar”</b><div style="font-size:11px;color:#7a5360;margin-top:5px">Disiplin mencatat • Monitoring • Evaluasi</div></div>
+</main>
+</section>
+
+<!-- INPUT -->
+<section id="input" class="page">
+<header><div class="brand"><div class="mini-logo">📖<b>K1</b></div><div><h1>Input Repot</h1><div class="subtitle">Daily Repot K1</div></div></div></header>
+<main><div class="back" onclick="showPage('appHome')">← Kembali</div>
+<div class="section-title">Input Repot</div><div class="section-sub">Masukkan data jumlah nasabah K1</div>
+<div class="card">
+<div class="field"><label>Tanggal</label><input id="iDate" type="date"></div>
+<div class="field"><label>Nama Cabang</label><input id="iBranch" placeholder="Contoh: Kuningan"></div>
+<div class="field"><label>Unit Kerja</label><select id="iUnit"><option value="">Pilih unit kerja</option><option>Teller</option><option>CSO</option></select></div>
+<div class="field"><label>Jumlah Nasabah</label><input id="iCount" type="number" min="0" placeholder="Masukkan jumlah nasabah"></div>
+<div class="btn-row"><button class="btn btn-primary" onclick="saveData()">Simpan Data</button><button class="btn btn-light" onclick="resetInput()">Reset</button></div>
+</div></main>
+</section>
+
+<!-- DAILY -->
+<section id="daily" class="page">
+<header><div class="brand"><div class="mini-logo">📖<b>K1</b></div><div><h1>Laporan Daily</h1><div class="subtitle">Daily Repot K1</div></div></div></header>
+<main><div class="back" onclick="showPage('appHome')">← Kembali</div>
+<div class="section-title">Laporan Daily</div><div class="section-sub">Pilih tanggal dan cabang</div>
+<div class="card"><div class="field"><label>Pilih Tanggal</label><input id="dDate" type="date" onchange="renderDaily()"></div><div class="field"><label>Cabang</label><select id="dBranch" onchange="renderDaily()"></select></div></div>
+<div id="dailyStats" class="stat-grid"></div>
+<div class="card" style="margin-top:13px"><div id="dailyTable"></div></div>
+</main>
+</section>
+
+<!-- PRINT -->
+<section id="print" class="page">
+<header><div class="brand"><div class="mini-logo">📖<b>K1</b></div><div><h1>Cetak Laporan</h1><div class="subtitle">Daily Repot K1</div></div></div></header>
+<main><div class="back no-print" onclick="showPage('appHome')">← Kembali</div>
+<div class="section-title no-print">Cetak Laporan</div><div class="section-sub no-print">Tentukan periode laporan</div>
+<div class="card no-print">
+<div class="field"><label>Periode Awal</label><input id="pStart" type="date" onchange="renderPrint()"></div>
+<div class="field"><label>Periode Akhir</label><input id="pEnd" type="date" onchange="renderPrint()"></div>
+<div class="field"><label>Cabang</label><select id="pBranch" onchange="renderPrint()"></select></div>
+<div class="btn-row"><button class="btn btn-primary" onclick="printReport()">🖨️ Cetak Laporan</button><button class="btn btn-maroon" onclick="shareReport()">↗ Share Laporan</button></div>
+</div><div id="printArea" class="print-area"></div>
+</main>
+</section>
+
+<!-- MASTER CABANG KCU -->
+<section id="masterBranch" class="page">
+<header><div class="brand"><div class="mini-logo">🏢<b>K1</b></div><div><h1>Master Cabang</h1><div class="subtitle">Khusus User KCU</div></div></div></header>
+<main><div class="back" onclick="showPage('appHome')">← Kembali</div>
+<div class="section-title">Daftar Cabang</div><div class="section-sub">KCU dapat menambah dan menghapus daftar cabang.</div>
+<div class="card">
+ <div class="field"><label>Nama Cabang Baru</label><input id="newBranch" placeholder="Contoh: Kuningan"></div>
+ <button class="btn btn-primary" onclick="addBranch()">＋ Tambah Cabang</button>
+</div>
+<div class="card"><div id="branchList"></div></div>
+</main>
+</section>
+
+<div id="nav" class="nav hidden">
+<button id="nHome" onclick="showPage('appHome')">⌂<br>Home</button>
+<button id="nInput" onclick="showPage('input')">＋<br>Input</button>
+<button id="nDaily" onclick="showPage('daily')">▥<br>Laporan</button>
+<button id="nPrint" onclick="showPage('print')">▣<br>Cetak</button>
+</div>
+</div>
+
+<script>
+const KEY='dailyRepotK1Data', LOGINKEY='dailyRepotK1Login';
+let data=JSON.parse(localStorage.getItem(KEY)||'[]');
+let role='Cabang';
+
+const $=id=>document.getElementById(id);
+const today=()=>new Date().toISOString().slice(0,10);
+function showPage(id){
+ const l=JSON.parse(localStorage.getItem(LOGINKEY)||'null');
+ if(l&&l.role==='Cabang'&&['print','masterBranch'].includes(id)){alert('Menu ini hanya tersedia untuk User KCU.');return}
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$(id).classList.add('active');
+ const nav=$('nav'); const app=['appHome','input','daily','print'].includes(id);
+ nav.classList.toggle('hidden',!app);
+ document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+ const map={appHome:'nHome',input:'nInput',daily:'nDaily',print:'nPrint'}; if(map[id])$(map[id]).classList.add('active');
+ if(id==='daily'){if(!$('dDate').value)$('dDate').value=today();refreshBranches();renderDaily()}
+ if(id==='print'){if(!$('pStart').value)$('pStart').value=today();if(!$('pEnd').value)$('pEnd').value=today();refreshBranches();renderPrint()}
+ window.scrollTo(0,0)
+}
+function selectRole(r){
+ role=r;
+ $('roleCabang').classList.toggle('selected',r==='Cabang');
+ $('roleKcu').classList.toggle('selected',r==='KCU');
+ $('loginBranchWrap').classList.toggle('hidden',r==='KCU');
+}
+function login(){
+ const name=$('loginName').value.trim(), pass=$('loginPass').value;
+ const branch=$('loginBranch').value.trim();
+ if(!name||!pass){alert('Silakan isi nama user dan password.');return}
+ if(role==='Cabang' && !branch){alert('Untuk User Cabang, nama cabang wajib diisi.');return}
+ localStorage.setItem(LOGINKEY,JSON.stringify({name,role,branch:role==='Cabang'?branch:''}));
+ $('userInfo').textContent=role==='Cabang'?`User: ${name} · ${role} · ${branch}`:`User: ${name} · ${role}`;
+ applyRoleAccess(role,branch);
+ showPage('appHome')
+}
+function applyRoleAccess(r,branch){
+ const isCabang=r==='Cabang';
+ $('masterBranchMenu').classList.toggle('hidden',isCabang);
+ $('printMenu').classList.toggle('hidden',isCabang);
+ $('nPrint').classList.toggle('hidden',isCabang);
+ // Cabang hanya dapat input dan melihat laporan cabangnya sendiri.
+ // KCU dapat melihat seluruh cabang, mencetak laporan, dan mengelola Master Cabang.
+ if(isCabang){
+   $('iBranch').value=branch||'';
+   $('iBranch').readOnly=true;
+ }else{
+   $('iBranch').readOnly=false;
+ }
+ refreshBranches();
+ renderDaily(); renderPrint(); renderBranchList();
+}
+function addBranch(){
+ const name=$('newBranch').value.trim();
+ if(!name){alert('Masukkan nama cabang.');return}
+ let list=JSON.parse(localStorage.getItem('dailyRepotK1Branches')||'[]');
+ if(!list.some(x=>x.toLowerCase()===name.toLowerCase())) list.push(name);
+ list.sort((a,b)=>a.localeCompare(b));
+ localStorage.setItem('dailyRepotK1Branches',JSON.stringify(list));
+ $('newBranch').value=''; refreshBranches(); renderBranchList(); alert('Cabang berhasil ditambahkan.');
+}
+function removeBranch(name){
+ if(confirm('Hapus cabang dari Master Cabang? Data laporan yang sudah ada tidak ikut terhapus.')){
+  let list=JSON.parse(localStorage.getItem('dailyRepotK1Branches')||'[]').filter(x=>x!==name);
+  localStorage.setItem('dailyRepotK1Branches',JSON.stringify(list));
+  refreshBranches();renderBranchList();
+ }
+}
+function renderBranchList(){
+ const list=JSON.parse(localStorage.getItem('dailyRepotK1Branches')||'[]');
+ const all=[...new Set([...list,...branches()])].sort();
+ $('branchList').innerHTML=all.length?all.map(b=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e6edf3"><span><b>${esc(b)}</b></span><button class="btn btn-danger" onclick="removeBranch('${esc(b).replace(/'/g,"\\'")}')">Hapus</button></div>`).join(''):'<div class="empty">Belum ada cabang.</div>';
+}
+function logout(){localStorage.removeItem(LOGINKEY);$('loginPass').value='';$('loginName').value='';$('loginBranch').value='';showPage('login')}
+function saveData(){
+ const date=$('iDate').value,branch=$('iBranch').value.trim(),unit=$('iUnit').value,count=Number($('iCount').value);
+ const l=JSON.parse(localStorage.getItem(LOGINKEY)||'null');
+ if(!date||!branch||!unit||$('iCount').value===''){alert('Lengkapi semua data terlebih dahulu.');return}
+ if(l&&l.role==='Cabang'&&branch!==l.branch){alert('User Cabang hanya dapat input untuk cabangnya sendiri.');return}
+ data.push({id:Date.now(),date,branch,unit,count});localStorage.setItem(KEY,JSON.stringify(data));alert('Data berhasil disimpan.');resetInput()
+}
+function resetInput(){
+ $('iDate').value=today();$('iUnit').value='';$('iCount').value='';
+ const l=JSON.parse(localStorage.getItem(LOGINKEY)||'null');
+ $('iBranch').value=(l&&l.role==='Cabang')?l.branch:'';
+}
+function branches(){return [...new Set(data.map(x=>x.branch))].sort()}
+function masterBranches(){return JSON.parse(localStorage.getItem('dailyRepotK1Branches')||'[]')}
+function allBranches(){return [...new Set([...masterBranches(),...branches()])].sort()}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function refreshBranches(){
+ const l=JSON.parse(localStorage.getItem(LOGINKEY)||'null');
+ ['dBranch','pBranch'].forEach(id=>{
+   const el=$(id),old=el.value;
+   let opts=allBranches();
+   if(l && l.role==='Cabang') opts=opts.filter(b=>b===l.branch);
+   el.innerHTML=(l&&l.role==='Cabang')?'':'<option value="ALL">Semua Cabang</option>';
+   el.innerHTML += opts.map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join('');
+   if([...el.options].some(o=>o.value===old))el.value=old;
+   else if(l&&l.role==='Cabang'&&opts.length)el.value=opts[0];
+ });
+}
+function renderDaily(){
+ refreshBranches();
+ const l=JSON.parse(localStorage.getItem(LOGINKEY)||'null');
+ const selectedBranch=(l&&l.role==='Cabang')?l.branch:$('dBranch').value;
+ const arr=data.filter(x=>x.date===$('dDate').value&&(selectedBranch==='ALL'||x.branch===selectedBranch));
+ const total=arr.reduce((s,x)=>s+x.count,0),t=arr.filter(x=>x.unit==='Teller').reduce((s,x)=>s+x.count,0),c=arr.filter(x=>x.unit==='CSO').reduce((s,x)=>s+x.count,0);
+ $('dailyStats').innerHTML=`<div class="stat"><small>Total Nasabah</small><b>${total}</b></div><div class="stat"><small>Jumlah Input</small><b>${arr.length}</b></div><div class="stat"><small>Teller</small><b>${t}</b></div><div class="stat"><small>CSO</small><b>${c}</b></div>`;
+ $('dailyTable').innerHTML=arr.length?`<div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Cabang</th><th>Unit</th><th>Nasabah</th><th>Aksi</th></tr></thead><tbody>${arr.map(x=>`<tr><td>${x.date}</td><td>${esc(x.branch)}</td><td><span class="badge">${x.unit}</span></td><td><b>${x.count}</b></td><td><button class="btn btn-danger" onclick="deleteData(${x.id})">Hapus</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">Belum ada data pada pilihan tersebut.</div>'
+}
+function deleteData(id){if(confirm('Hapus data ini?')){data=data.filter(x=>x.id!==id);localStorage.setItem(KEY,JSON.stringify(data));renderDaily();renderPrint()}}
+function renderPrint(){
+ refreshBranches();const s=$('pStart').value,e=$('pEnd').value;
+ const l=JSON.parse(localStorage.getItem(LOGINKEY)||'null');
+ const b=(l&&l.role==='Cabang')?l.branch:$('pBranch').value;
+ const arr=data.filter(x=>(!s||x.date>=s)&&(!e||x.date<=e)&&(b==='ALL'||x.branch===b)),total=arr.reduce((sum,x)=>sum+x.count,0);
+ $('printArea').innerHTML=`<div class="report-head"><h2>DAILY REPOT K1</h2><p>Periode ${s||'-'} s/d ${e||'-'} · ${b==='ALL'?'Semua Cabang':esc(b)}</p></div><div class="stat-grid" style="margin-bottom:14px"><div class="stat"><small>Total Nasabah</small><b>${total}</b></div><div class="stat"><small>Total Input</small><b>${arr.length}</b></div></div>${arr.length?`<div class="table-wrap"><table><thead><tr><th>No</th><th>Tanggal</th><th>Cabang</th><th>Unit</th><th>Jumlah</th></tr></thead><tbody>${arr.map((x,i)=>`<tr><td>${i+1}</td><td>${x.date}</td><td>${esc(x.branch)}</td><td>${x.unit}</td><td><b>${x.count}</b></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">Belum ada data pada periode tersebut.</div>'}`
+}
+function printReport(){renderPrint();setTimeout(()=>window.print(),100)}
+async function shareReport(){renderPrint();const text=$('printArea').innerText;if(navigator.share){try{await navigator.share({title:'Daily Repot K1',text})}catch(e){}}else{try{await navigator.clipboard.writeText(text);alert('Ringkasan laporan disalin. Silakan paste ke WhatsApp.')}catch(e){alert('Share tidak tersedia di browser ini.')}}}
+(function init(){
+ $('iDate').value=today();$('dDate').value=today();$('pStart').value=today();$('pEnd').value=today();$('loginBranchWrap').classList.remove('hidden'); refreshBranches();renderDaily();renderPrint();renderBranchList();
+ const l=JSON.parse(localStorage.getItem(LOGINKEY)||'null');
+ if(l){
+ role=l.role;
+ $('userInfo').textContent=l.role==='Cabang'?`User: ${l.name} · ${l.role} · ${l.branch}`:`User: ${l.name} · ${l.role}`;
+ $('loginBranchWrap').classList.toggle('hidden',l.role==='KCU');
+ applyRoleAccess(l.role,l.branch);
+ showPage('appHome')
+}else showPage('splash')
+})();
+</script>
+</body>
+</html>
