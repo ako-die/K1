@@ -84,21 +84,11 @@ main{padding:18px 15px 90px}.section-title{font-size:21px;color:var(--navy);font
 
 <!-- SPLASH -->
 <section id="splash" class="page active">
- <div class="splash">
-  <div class="logo-big"><div class="book" style="width:92px;height:72px;position:relative;margin-bottom:8px">
-<svg viewBox="0 0 180 140" width="92" height="72" aria-label="Buku laporan K1">
- <path d="M12 20Q55 2 90 22v93Q52 96 12 112z" fill="#fff" stroke="#d8e9f7" stroke-width="5"/>
- <path d="M168 20Q125 2 90 22v93q38-19 78-3z" fill="#fff" stroke="#d8e9f7" stroke-width="5"/>
- <path d="M34 42h42M34 59h42M34 76h30" stroke="#0B4F9C" stroke-width="7" stroke-linecap="round"/>
- <path d="M146 40v48M134 54l12-14 12 14" stroke="#8E1734" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div><div class="k1">K1</div><div class="daily">DAILY REPOT</div></div>
-  <h1>Daily Repot <span>K1</span></h1>
-  <p>Catat Hari Ini, Dukung Layanan yang Lebih Baik</p>
-  <div class="progress"><i></i></div>
-  <button class="splash-start" onclick="showPage('login')">MULAI</button>
-  <div class="created">Created by Dee</div>
+ <div class="splash" style="background:#EAF6FF;min-height:100vh;position:relative;overflow:hidden">
+  <img src="splash-1080x1920.png" alt="K1 Daily Repot Splash" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <button class="splash-start" style="position:absolute;z-index:5;bottom:110px;left:50%;transform:translateX(-50%);background:#0B4F9C;color:#fff;border:0;border-radius:12px;padding:13px 40px;font-weight:800;box-shadow:0 7px 15px #0b4f9c44;cursor:pointer" onclick="showPage('login')">MULAI</button>
  </div>
-</section>
+
 
 <!-- LOGIN -->
 <section id="login" class="page">
